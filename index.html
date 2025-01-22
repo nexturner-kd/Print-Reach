@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Embedded Messaging POC</title>
+</head>
+<body>
+<h1>Embedded Messaging Proof of Concept</h1>
+<p>This is a test page to display embedded messaging.</p>
+<!-- Display Image -->
+<img src="PrintReachUIImage.png" alt="Sample Image" style="width: 100vw; height: 100vh;">
+ 
+    <!-- Script for Embedded Messaging -->
+<script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00DKd000006PXKd',
+				'PrintReachServiceAgent',
+				'https://ne1731472210030.my.site.com/ESWPrintReachServiceAgent1737540341602',
+				{
+					scrt2URL: 'https://ne1731472210030.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
